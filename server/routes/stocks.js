@@ -11,4 +11,8 @@ router.get('/', (req,res) => {
     res.status(200).json(stockData)
 })
 
+router.get('/:stockId', (req,res) => {
+    res.status(200).sendFile(path.resolve(__dirname, '../public/stock.html'))
+})
+
 export default router
